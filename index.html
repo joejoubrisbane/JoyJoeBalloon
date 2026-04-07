@@ -67,8 +67,8 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": -27.5935,
-        "longitude": 153.0382
+        "latitude": -27.5667,
+        "longitude": 153.0333
       },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
@@ -88,18 +88,20 @@
         "@type": "GeoCircle",
         "geoMidpoint": {
           "@type": "GeoCoordinates",
-          "latitude": -27.5916,
-          "longitude": 153.0593
+          "latitude": -27.5667,
+          "longitude": 153.0333
         },
         "geoRadius": "35000"
       },
-      "sameAs": "https://www.facebook.com/joyjoeballoontwisting",
+      "sameAs": [
+        "https://www.facebook.com/joyjoeballoontwisting"
+      ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5",
         "reviewCount": "47"
       },
-      "description": "Professional balloon twister in Brisbane servicing kids parties & events. 48 custom balloon designs including popular characters.",
+      "description": "Professional balloon twisting entertainer for kids birthday parties and corporate events in Brisbane. 48 designs, 47 five-star reviews, 8+ years experience.",
       "keywords": "balloon twister brisbane, balloon twisting artist, kids party entertainment, balloon animals brisbane"
     }
     </script>
@@ -781,7 +783,7 @@
                 <div class="col-lg-8">
                     <details class="mb-3 border rounded p-3 bg-white">
                         <summary class="fw-bold" style="cursor:pointer; font-size:1.05rem;">How much does balloon twisting cost in Brisbane?</summary>
-                        <p class="mt-2 mb-0">Joy Joe's 2-hour balloon twisting party package starts from $350. A travel fee applies based on your distance from Sunnybank.</p>
+                        <p class="mt-2 mb-0">Joy Joe's 2-hour balloon twisting party package starts from $320. A travel fee applies based on your distance from Sunnybank.</p>
                     </details>
                     <details class="mb-3 border rounded p-3 bg-white">
                         <summary class="fw-bold" style="cursor:pointer; font-size:1.05rem;">How many kids can Joy Joe entertain in 2 hours?</summary>
@@ -873,7 +875,7 @@
     <!-- Footer-->
     <footer class=" py-5">
         <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">Copyright &copy; 2022 - Joy Joe Balloon Twisting</div>
+            <div class="small text-center text-muted">Copyright &copy; 2022&ndash;2026 - Joy Joe Balloon Twisting</div>
 
         </div>
     </footer>
@@ -908,6 +910,21 @@
             }, { passive: true });
             window.addEventListener('resize', checkMobile);
             checkMobile();
+        })();
+    </script>
+
+    <!-- Book Now button: SMS on mobile, #contact on desktop -->
+    <script>
+        (function() {
+            var isMobile = window.innerWidth < 768 || /Mobi/i.test(navigator.userAgent);
+            if (!isMobile) {
+                document.querySelectorAll('a[href="sms:0432794642"]').forEach(function(el) {
+                    var text = el.textContent.trim().replace(/\s+/g, ' ');
+                    if (text === 'Book Now' || text === 'BOOK NOW') {
+                        el.href = '#contact';
+                    }
+                });
+            }
         })();
     </script>
 
